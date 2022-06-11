@@ -24,6 +24,22 @@ html{
     }
 };
 
+.fade {
+    animation-name: fade;
+    animation-duration: 400ms;
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 body{
     min-height: 100vh;
     background-image: url("images/pattern-curve.svg");
@@ -68,8 +84,119 @@ main{
 
         .image{
             position: relative;
+            background-image: url("images/pattern-bg.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 20.9375rem;
+            height: 19.625rem;
+            text-align: center;
+            position: relative;
+            margin-bottom: 2rem;
+
+            @include lg{
+                height: 41.5625rem;
+                width: 44.1875rem;
+                margin-left: -10rem;
+
+            }
+
+            .person {
+                width: 80%;
+                height: 83%;
+                border-radius: 0.3rem;
+                margin: 2rem auto 0;
+                box-shadow: 5px 32px 43px 0px hsla(240, 37%, 20%, 0.2);
+
+                @include lg{
+                    height: 82%;
+                    width: 77%;
+                    margin-top: 4rem;
+                }
             
+              }
+
+              
+.buttons {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: #fff;
+    border-radius: 2.13rem;
+    overflow: hidden;
+
+    @include lg{
+        top: 87%;
+        left: 18%;
+        transform: translate(0%, 0%);
+    }
+  
+    .btn {
+      border: none;
+      border-color: transparent;
+      background-color: #fff;
+      padding: 0.8rem 1rem;
+      transition: 0.3s ease-in-out;
+  
+      span {
+        display: none;
+      }
+      &:hover {
+        background-color: #e7e4f9;
+      }
+      &:nth-child(1) {
+        padding-right: 1rem;
+      }
+      &:last-child {
+        padding-left: 1rem;
+      }
+      & > img {
+        width: 1rem;
+      }
+    }
+  }
+  
         }
+
+        .text {
+            background-image: url("images/pattern-quotes.svg");
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 3.75rem;
+            text-align: center;
+            padding-top: 1.625rem;
+      
+            @include lg{
+                
+              font-size: 2rem;
+              text-align: left;
+              line-height: 1.5;
+              width: 35.375rem;
+              z-index: 2;
+          }
+      
+            .testimonial {
+              color: hsl(240, 38%, 20%);
+              font-size: 1.4rem;
+              font-weight: 500;
+              margin-bottom: 1.25rem;
+              @include lg{
+                font-size: 2rem;
+                line-height: 1.5;
+            }
+            }
+            .info {
+              color: hsl(240, 38%, 20%);
+              font-weight: 700;
+              font-size: 1.25rem;
+              margin-bottom: 4px;
+              span {
+                display: block;
+                color: hsl(240, 18%, 77%);
+                font-weight: 300;
+              }
+            }
+          }
     }
 }
 

@@ -16,7 +16,28 @@
 
     <div class="slide fade slide-1">
       <div class="image">
-        <img src="images/image-tanya.jpg" alt="image-tanya">
+        <img src="images/image-tanya.jpg" alt="image-tanya" class="person">
+
+        <div class="buttons">
+          <button
+            class="btn prev"
+            name="button"
+            aria-label="button previous"
+            id="prev"
+          >
+            <span>Previous</span>
+            <img src="./images/icon-prev.svg" alt="icon-prev" />
+          </button>
+          <button
+            class="btn next"
+            name="button"
+            aria-label="button next"
+            id="next"
+          >
+            <span>Next</span>
+            <img src="./images/icon-next.svg" alt="icon-next" />
+          </button>
+        </div>
       </div>
 
       <div class="text">
@@ -27,22 +48,52 @@
       </div>
     </div>
 
+    <!-- slide-2 -->
+    <div class="slide fade slide-2">
+      <div class="image">
+        <img src="images/image-john.jpg" alt="image-john" class="person">
+
+        <div class="buttons">
+          <button
+            class="btn prev"
+            name="button"
+            aria-label="button previous"
+            id="prev" onclick="moveSlide(-1)"
+          >
+            <span>Previous</span>
+            <img src="./images/icon-prev.svg" alt="icon-prev" />
+          </button>
+          <button
+            class="btn next"
+            name="button"
+            aria-label="button next"
+            id="next" onclick="moveSlide(1)"
+          >
+            <span>Next</span>
+            <img src="./images/icon-next.svg" alt="icon-next" />
+          </button>
+        </div>
+      </div>
+
+      <div class="text">
+        <p class="testimonial">“ If you want to lay the best foundation possible I’d recommend taking this course. 
+          The depth the instructors go into is incredible. I now feel so confident about 
+          starting up as a professional developer. ”</p>
+        <p class="info">John Tarkpor<span>Junior Front-end Developer</span></p>
+      </div>
+    </div>
+
+
   </main>
 
-  <!-- 
-
-  “ If you want to lay the best foundation possible I’d recommend taking this course. 
-  The depth the instructors go into is incredible. I now feel so confident about 
-  starting up as a professional developer. ”
-
-  John Tarkpor
-  Junior Front-end Developer -->
-  
-  <!-- <footer>
+  <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Headbwoi</a>.
     </div>
-  </footer> -->
+  </footer>
+
+  <script src="index.js"></script>
+
 </body>
 </html>

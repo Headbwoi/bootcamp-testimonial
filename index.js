@@ -9,7 +9,7 @@ function moveSlide(n) {
 }
 
 function showSlides(n) {
-  let i;
+
   let slides = document.querySelectorAll(".slide");
 
   if (n > slides.length) {
@@ -19,9 +19,9 @@ function showSlides(n) {
     slideIndex = slides.length;
   }
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+  slides.forEach(slide => {
+    slide.style.display = "none"
+  })
 
   slides[slideIndex - 1].style.display = "flex";
 }

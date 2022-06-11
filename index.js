@@ -28,3 +28,15 @@ function showSlides(n) {
 
 prev.onclick = () => moveSlide(-1);
 next.onclick = () => moveSlide(1);
+
+document.body.addEventListener("keydown", e => {
+  let key = e.keyCode
+  console.log(key);
+
+  if (key === 37) {
+    moveSlide(-1)
+  }
+  if (key === 39) {
+    moveSlide(1)
+  }
+})

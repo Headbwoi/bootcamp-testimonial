@@ -1,0 +1,92 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin md {
+    @media (min-width: 768px) {
+        @content
+    }
+};
+@mixin lg {
+    @media (min-width: 1024px) {
+        @content
+    }
+};
+@mixin xl {
+    @media (min-width: 1220px) {
+        @content
+    }
+};
+
+body{
+    min-height: 100vh;
+    background-image: url("images/pattern-curve.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 4.5rem;
+
+    @include lg{
+        background-size: 100% 6rem;
+    }
+    @include xl{
+        background-size: 50% 8rem;
+    }
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.5rem;
+        max-width: 23.4375rem;
+        width: 100%;
+
+        @include md{
+            max-width: 48rem;
+        }
+        @include lg{
+            max-width: 64rem;
+            flex-direction: row-reverse;
+        }
+        @include xl{
+            max-width: 75.3125rem;
+            flex-direction: row-reverse;
+        }
+
+        .image{
+            position: relative;
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }

@@ -1,5 +1,5 @@
-const prev = document.querySelector("#prev");
-const next = document.querySelector("#next");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
 
 let slideIndex = 1;
 showSlides(slideIndex);

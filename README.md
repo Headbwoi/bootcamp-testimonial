@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [live site](gfg)
+- Live Site URL: [live site](https://headbwoi.github.io/bootcamp-testimonial/)
 
 ## My process
 
